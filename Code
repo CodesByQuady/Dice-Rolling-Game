@@ -1,0 +1,27 @@
+
+import random
+
+def diceNum():
+    dice = random.randint(0,6)
+    print('You have rolled:',dice)
+
+def diceRoll():
+    while True:
+        choice = input("Press enter to roll the dice, type end to end game: ")
+        if choice == '':
+            diceNum()
+            c2 = input("Would You Like to roll again? Yes/No: ")
+            if c2 == 'Yes':
+                continue
+            elif c2 == 'No':
+                print('Have a good day, user!')
+                break
+            else:
+                print("That's not a valid input.")
+        elif choice == 'end':
+            print('Have a good day user!')
+            break
+        
+
+diceRoll()
+            
